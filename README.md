@@ -20,7 +20,7 @@ type Person struct {
 	Parents Parents
 }
 
-// Định nghĩa một phương thức cho struct Person
+# Định nghĩa một phương thức cho struct Person
 func (p Person) Greet() {
     fmt.Printf("Hello, my name is %s, I'm %d years old. \n I come from %s, %s. \n My father is %s and my mom is %s.\n", p.Name, p.Age, p.Address.City, p.Address.Ward, p.Parents.father, p.Parents.mother )
 }
