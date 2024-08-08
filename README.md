@@ -40,3 +40,37 @@ func main() {
     }
     p.Greet()
 }
+
+# Vòng lặp for
+
+package main
+
+import "fmt"
+
+func main() {
+    sum := 1
+
+    // Vòng lặp for vô hạn
+    for {
+        sum += sum // Cộng sum vào chính nó
+        if sum > 1000 {
+            break // Thoát khỏi vòng lặp khi sum lớn hơn 1000
+        }
+    }
+
+    fmt.Println("Tổng:", sum) // Output: Tổng: 1024
+}
+# vòng lặp trong slice
+package main
+
+import "fmt"
+
+func main() {
+    nums := []int{2, 4, 6, 8, 10}
+
+    // Vòng lặp for với range để lặp qua các phần tử của slice
+    for index, value := range nums {
+        fmt.Printf("Index: %d, Value: %d\n", index, value)
+    }
+}
+
