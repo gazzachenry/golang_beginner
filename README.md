@@ -33,3 +33,32 @@ func main() {
     // In chiều dài và dung lượng của slice
     fmt.Println("Length and capacity of slice s3:", len(s3), cap(s3))
 }
+
+# Slice of slices 
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	// Create a tic-tac-toe board.
+	board := [][]string{
+		[]string{"_", "_", "_"},
+		[]string{"_", "_", "_"},
+		[]string{"_", "_", "_"},
+	}
+
+	// The players take turns.
+	board[0][0] = "X" //[dòng] - [cột]
+	board[2][2] = "O"//[dòng] - [cột]
+	board[1][2] = "X"//[dòng] - [cột]
+	board[1][0] = "O"//[dòng] - [cột]
+	board[0][2] = "X"//[dòng] - [cột]
+	board[1][1] = "T"
+
+	for i := 0; i < len(board); i++ {
+		fmt.Printf("%s\n", strings.Join(board[i], " "))
+	}
+}
